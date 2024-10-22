@@ -1,0 +1,39 @@
+@media (max-width: 425px) {
+    address {
+        font-size: 0.7em;
+    }
+    .btn {
+        width: 120px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+@media (min-width:1024px) {
+    address {
+        padding-right: 200px;
+    }
+}
+
+
+.footer {
+    background-color: var(--color3);
+    color: white;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+.footer .social-icons i {
+    padding-top: 70px;
+    font-size: 35px;
+    margin: 0 10px;
+    color: black;
+}
+.footer .social-icons i:hover  {
+    color: white;
+}

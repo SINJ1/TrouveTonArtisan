@@ -1,0 +1,33 @@
+<main>
+    <div class="container">
+    <div class="icon-container">
+    <img src="../assets/img/favicon.png" alt="Favicon du site Trouve ton artisna" height="40" width="40"/>
+    </div>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin.
+    </p>
+    </div>
+    <div *ngIf="artisans.length > 0; else noArtisans">
+        <h2>Les artisans dans la catégorie {{ category }}</h2>
+        <div class="row col-lg-12 d-flex justify-content-evenly">
+            <div *ngFor="let artisan of artisans" class="card col-md-6 mb-5 p-4">
+                <div class="card-body">
+                    <img [src]="artisan.img" [alt]="artisan.alt" height="300" width="300" class="img-rounded">
+                    <div class="rating">
+                        <p class="card-text fw-semibold">{{artisan.note | note}}</p>
+                    </div>
+                    <h4 class="card-title fw-bolder">{{artisan.name}}</h4>
+                    <p class="card-text fw-semibold">{{artisan.specialty}}</p>
+                    <p class="card-text fw-semibold">{{artisan.location}}</p>
+                    <button type="button" id="bouton" class="btn btn-primary" (click)="viewArtisan(artisan.id)">Contacter</button>
+                </div>
+                
+            </div>
+
+        </div>
+        
+    </div>
+    <ng-template #noArtisans>
+        <p>Il n'y a pas d'artisans dans cette catégorie</p>
+    </ng-template>
+</main>

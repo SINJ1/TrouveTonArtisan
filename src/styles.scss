@@ -1,0 +1,77 @@
+@font-face{
+    font-family: "Graphik";
+    src:url('../src/assets/font/Graphik-Medium-Trial.otf');
+}
+
+:root{
+    --color1: #f1f8fc;
+    --color2: #0074c7;
+    --color3: #00497c;
+    --color4: #384050;
+    --color5: #cd2c2e;
+    --color6: #82b864;
+}
+
+body {
+    background-color: white;
+    font-family: "Graphik";
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+   
+    
+    
+    .card {
+        background-color: var(--color1);
+        margin-top: 10px;
+        text-align: center;
+        border: solid 2px var(--color2);
+        border-radius: 20px;
+    }
+    
+}
+.rating {
+    color: #AF8612;
+}
+.alert-success {
+    text-align: center;
+    background-color: var(--color4);
+    color: var(--color6);
+    border-color: var(--color4);
+
+}
+.btn-primary {
+    background-color: var(--color3);
+    color: white;
+}
+.alert-danger {
+    text-align: center;
+    background-color: var(--color4);
+    color: var(--color5);
+    border-color: var(--color4);
+}
+
+@media (max-width: 425px) {
+
+    .card {
+        width: 17rem;
+    }
+    
+}
+@media (min-width: 426px) {
+    .card {
+        width: 17rem;
+        margin-left: 20px;
+        
+    }
+    
+    
+}
+@media (min-width: 1024px) {
+    .card{
+        width: 23rem;
+    }
+}

@@ -1,0 +1,48 @@
+<main class="container">
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <h3 class="titre-fiche">{{artisan.name}}</h3>
+        <img [src]="artisan.img" [alt]="artisan.alt" height="30" width="30" class="profile-img">
+        <p class="para"><strong>Spécialité :</strong> {{artisan.specialty}}</p>
+        <p class="para"><strong>Localisation :</strong> {{artisan.location}}</p>
+        <p class="para"><strong>Web site :</strong> <a [href]="artisan.website" target="_blank">{{artisan.website}}</a></p>
+        <div class="rating">
+          <p><strong>Rate :</strong> {{artisan.note |note }}</p>
+        </div>
+        <div class="about">
+          <h5>À propos :</h5>
+          <p>{{artisan.about}}</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="contact-form">
+          <div id="contact-titre" class="text-center">
+            <h4>Contactez l'artisan</h4>
+          </div>
+          <div *ngIf="messageSent" class="alert alert-success mt-3" role="alert">
+            Message envoyé avec succès !
+          </div>
+          <div *ngIf="errorMessage" class="alert alert-danger mt-3" role="alert">
+            {{ errorMessage }}
+          </div>
+          <form [formGroup]="form" action="javascript:void(0)" (submit)="send()">
+            <div class="mb-3">
+              <label for="name" class="form-label"></label>
+              <input placeholder="Nom" formControlName="from_name" type="text" id="name" class="form-control" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label"></label>
+              <input placeholder="Objet" formControlName="subject" type="text" id="subject" class="form-control" name="subject" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label"></label>
+              <textarea formControlName="message" id="message" placeholder="Message" class="form-control" name="message" rows="3" required></textarea>
+            </div>
+            <div id="btn-envoyer-contact" class="text-center">
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>

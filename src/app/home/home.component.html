@@ -1,0 +1,46 @@
+<main class="main">
+    <div class="content">
+        <div class="text-section">
+         <h2>Comment trouver mon artisan ?</h2>
+         <ol>
+          <li>Choisir la catégorie d’artisan dans le menu.</li>
+          <li>Choisir un artisan.</li>
+          <li>Contacter via le formulaire de contact.</li>
+          <li>Une réponse sera apportée sous 48h.</li>
+         </ol>
+        </div>
+        <div class="image-section">
+         <div class="image-container">
+             <img src="../assets/img/artisan 1.webp" alt="Photo d'un artisan" height="200" width="400">
+         </div>
+         <div class="image-container">
+             <img src="../assets/img/artisan 2.webp" alt="Photo d'un artisan" height="200" width="400">
+         </div>
+         <div class="image-container">
+             <img src="../assets/img/artisan 3.webp" alt="Photo d'un artisan" height="200" width="400">
+         </div>
+         <div class="image-container">
+             <img src="../assets/img/artisan 4.webp" alt="Photo d'un artisan" height="200" width="400">
+         </div>
+        </div>
+       </div>
+       <div class="container">
+        <h2 class="section-title">Les meilleurs artisans du mois</h2>
+    <div class="row col-lg-12 d-flex justify-content-evenly">
+      <div class="card col-md-6 mb-5 p-4" *ngFor="let artisan of (artisans | sortbynote).slice(0, 3)">
+        <div class="card-body">
+            <img [src]="artisan.img" [alt]="artisan.alt" height="300" width="300" class="img-rounded">
+            <div class="rating">
+                <p class="card-text fw-semibold">{{artisan.note | note}}</p>
+            </div>
+            <h4 class="card-title fw-bolder">{{artisan.name}}</h4>
+            <p class="card-text fw-semibold">{{artisan.specialty}}</p>
+            <p class="card-text fw-semibold">{{artisan.location}}</p>
+            <button type="button" id="bouton" class="btn btn-primary" (click)="viewArtisan(artisan.id)">Contacter</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </main>
+  
+  
