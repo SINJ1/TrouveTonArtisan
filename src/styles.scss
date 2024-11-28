@@ -54,21 +54,11 @@ body {
     border-color: var(--color4);
 }
 
-@media (max-width: 425px) {
-
+@media (min-width: 481px) and (max-width: 768px) {
     .card {
-        width: 17rem;
+        width: 50%; // Ajuster la largeur pour les tablettes
+        margin: 10px; // Ajuster la marge pour les tablettes
     }
-    
-}
-@media (min-width: 426px) {
-    .card {
-        width: 17rem;
-        margin-left: 20px;
-        
-    }
-    
-    
 }
 @media (min-width: 1024px) {
     .card{
