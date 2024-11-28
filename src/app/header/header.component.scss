@@ -16,6 +16,12 @@
     color: #000;
     margin-right: 1.5rem;
 }
+
+.btn-primary{
+    background-color: var(--color2);
+    border-color: var(--color2);
+}
+
 .form-inline {
     display: flex;
     align-items: center;

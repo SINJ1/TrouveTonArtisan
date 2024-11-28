@@ -62,19 +62,19 @@ body {
 @media (min-width: 481px) and (max-width: 768px) {
     .card {
         .profile-img {
-            width: 50%;
+            width: 100%;
         }
         width: 50%;
         margin: 10px;
     }
     .about {
-        padding: 10px; /* Réduit le padding sur les écrans plus petits */
+        padding: 10px;
     }
     .about h5 {
-        font-size: 1.2em; /* Réduit la taille du titre */
+        font-size: 1.2em; 
     }
     .about p {
-        font-size: 0.9em; /* Réduit la taille du texte */
+        font-size: 0.9em;
     }
 }
 @media (min-width: 1024px) {
