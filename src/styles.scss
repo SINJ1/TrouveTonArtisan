@@ -54,14 +54,34 @@ body {
     border-color: var(--color4);
 }
 
+.btn-primary {
+    background-color: var(--color3);
+    border-color: var(--color3);
+}
+
 @media (min-width: 481px) and (max-width: 768px) {
     .card {
-        width: 50%; // Ajuster la largeur pour les tablettes
-        margin: 10px; // Ajuster la marge pour les tablettes
+        .profile-img {
+            width: 50%;
+        }
+        width: 50%;
+        margin: 10px;
+    }
+    .about {
+        padding: 10px; /* Réduit le padding sur les écrans plus petits */
+    }
+    .about h5 {
+        font-size: 1.2em; /* Réduit la taille du titre */
+    }
+    .about p {
+        font-size: 0.9em; /* Réduit la taille du texte */
     }
 }
 @media (min-width: 1024px) {
     .card{
         width: 23rem;
+    }
+    .profile-img {
+        width: 100%;
     }
 }
