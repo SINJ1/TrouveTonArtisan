@@ -53,3 +53,9 @@ body {
         margin-bottom: 30px;
     }
 }
+@media (max-width: 800px) and (min-width: 300px) {
+    .contact-form {
+        position: relative;
+        top: 16px;
+    }
+}
