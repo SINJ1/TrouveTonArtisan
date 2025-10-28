@@ -1,82 +1,66 @@
 .navbar {
-    padding: 1rem 2rem;
-    background-color: var(--color1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color1);
+  display: flex;
+  align-items: center;
 }
 
-.navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.navbar-brand span {
-    display: block;
-    font-size: 0.8rem;
-    color: var(--color2);
+.navbar-brand img {
+  height: 100px;
 }
 
 .nav-link {
-    font-size: 1rem;
-    color: #000;
-    margin-right: 1.5rem;
+  color: var(--color3);
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--color2);
 }
 
 .btn-primary {
-    background-color: var(--color2);
-    border-color: var(--color2);
+  background-color: var(--color2);
+  border: none;
 }
 
-.form-inline {
-    display: flex;
-    align-items: center;
+.navbar-toggler {
+  border: none;
+  color: var(--color3);
+  font-size: 1.5rem;
 }
 
-.form-control {
-    border-radius: 0.25rem;
-    margin-right: 0.5rem;
+.search-form {
+  flex-grow: 1;
+  max-width: 500px;
+  margin: 0 20px;
 }
 
-/* ✅ Fix responsive */
+@media (max-width: 992px) {
+  .search-form {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
-    .navbar-toggler {
-        margin-left: auto;
-    }
-    img {
-        width: 150px;
-    }
-    form {
-        width: 300px;
-    }
-    select {
-        width: 100px;
-    }
-}
+  .navbar {
+    flex-wrap: wrap;
+  }
 
-@media (min-width: 426px) {
-    .navbar-toggler {
-        margin-left: auto;
-    }
-    img {
-        width: 150px;
-    }
-    form {
-        width: 300px;
-    }
-    select {
-        width: 100px;
-    }
-}
+  .search-form {
+    order: 2;
+    width: 100%;
+    margin-top: 10px;
+  }
 
-@media (min-width: 1024px) {
-    img {
-        width: 250px;
-    }
-    form {
-        width: 400px;
-    }
-    select {
-        width: 200px;
-    }
+  .navbar-toggler {
+    order: 1;
+    margin-left: auto;
+  }
+
+  .navbar-collapse {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
 }
