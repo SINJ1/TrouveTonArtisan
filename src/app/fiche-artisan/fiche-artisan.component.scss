@@ -1,15 +1,18 @@
 body {
     background-color: var(--color1);
 }
+
 .titre-fiche {
     color: var(--color3);
 }
+
 .para {
     color: var(--color3);
     font-size: 20px;
     margin-top: 20px;
     text-align: left;
 }
+
 .container {
     background-color: white;
     border-radius: 15px;
@@ -17,18 +20,21 @@ body {
     margin-top: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .profile-img {
     border-radius: 10%;
     overflow: hidden;
-    width: 25%; 
-    height: 25%;
+    width: 25%;
+    height: auto;
 }
+
 .contact-form {
     background-color: var(--color4);
     border-radius: 15px;
     padding: 20px;
     color: var(--color1);
 }
+
 .contact-form input, .contact-form textarea {
     background-color: #d9d9d985;
     border: none;
@@ -37,6 +43,7 @@ body {
     width: 100%;
     margin-bottom: 10px;
 }
+
 .contact-form button {
     background-color: var(--color3);
     border: none;
@@ -44,18 +51,36 @@ body {
     padding: 10px 20px;
     color: white;
 }
+
 .about {
     margin-top: 20px;
     color: var(--color3);
 }
-.card-body {
-    img {
-        margin-bottom: 30px;
-    }
+
+.card-body img {
+    margin-bottom: 30px;
 }
-@media (max-width: 800px) and (min-width: 300px) {
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+        padding: 15px;
+    }
+
+    .para {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .profile-img {
+        width: 60%;
+        margin: 0 auto;
+        display: block;
+    }
+
     .contact-form {
-        position: relative;
-        top: 16px;
+        top: 0;
+        position: static;
+        padding: 15px;
     }
 }
