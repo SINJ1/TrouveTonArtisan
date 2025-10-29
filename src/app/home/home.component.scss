@@ -72,3 +72,25 @@
     width: 50%; 
     height: 40%;
   }
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    .text-section {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+    .image-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* ✅ grille 2 colonnes */
+        gap: 10px; /* espace entre les images */
+        width: 100%;
+        padding: 20px;
+    }
+    .image-container {
+        width: 100%; /* ✅ chaque image prend son espace grid */
+        padding: 5px;
+    }
+}
